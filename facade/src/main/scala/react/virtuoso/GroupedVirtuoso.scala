@@ -39,10 +39,10 @@ final case class GroupedVirtuoso[D](
   groupCounts:             List[Int] = List(Int.MaxValue), // It would be cool if this was a NonEmptyList
   override val modifiers:  Seq[TagMod] = Seq.empty
 ) extends GenericComponentPAC[GroupedVirtuoso.GroupedVirtuosoProps[D], GroupedVirtuoso[D]] {
-  override protected def cprops    = GroupedVirtuoso.props(this)
-  override protected val component = GroupedVirtuoso.component[D]
+  override protected def cprops                     = GroupedVirtuoso.props(this)
+  override protected val component                  = GroupedVirtuoso.component[D]
   override def addModifiers(modifiers: Seq[TagMod]) = copy(modifiers = this.modifiers ++ modifiers)
-  def apply(mods:                      TagMod*)     = addModifiers(mods)
+  def apply(mods: TagMod*)                          = addModifiers(mods)
 }
 
 object GroupedVirtuoso {
@@ -289,6 +289,6 @@ object GroupedVirtuoso {
     p
   }
 
-  private def component[D] =
+  private def component[D]                                     =
     JsComponent[GroupedVirtuosoProps[D], Children.Varargs, Null](RawComponent)
 }
