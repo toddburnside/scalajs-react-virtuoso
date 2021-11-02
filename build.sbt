@@ -6,8 +6,8 @@ Global / excludeLintKeys += webpackExtraArgs
 
 Global / semanticdbEnabled := true
 
-val reactVirtuoso      = "2.2.2"
-val reactJS            = "17.0.2"
+val reactVirtuoso = "2.2.2"
+val reactJS       = "17.0.2"
 
 val scalaJsReact       = "2.0.0-RC5"
 val scalaJsReactCommon = "0.14.6"
@@ -25,7 +25,7 @@ addCommandAlias(
 
 inThisBuild(
   List(
-    scalaVersion        := "2.13.6",
+    scalaVersion        := "2.13.7",
     organization        := "io.github.toddburnside",
     sonatypeProfileName := "io.github.toddburnside",
     homepage            := Some(
